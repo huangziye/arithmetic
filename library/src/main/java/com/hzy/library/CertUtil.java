@@ -95,8 +95,8 @@ public class CertUtil {
                 s32[i] = 0;
             }
             System.arraycopy(data, 32, s32, 32, 32);
-            ASN1Integer d_r = new ASN1Integer(new BigInteger(r32));
-            ASN1Integer d_s = new ASN1Integer(new BigInteger(s32));
+            ASN1Integer d_r = new ASN1Integer(new BigInteger(1, r32));
+            ASN1Integer d_s = new ASN1Integer(new BigInteger(1, s32));
             ASN1EncodableVector v2 = new ASN1EncodableVector();
             v2.add(d_r);
             v2.add(d_s);
